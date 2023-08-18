@@ -12,9 +12,9 @@ a =os.getenv('secret_key')
 
 
 
-w= jwt.decode("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjA5MzcyMTE2NjgzIiwiZGF0ZSI6IjIwMjMtMDgtMDkgMTE6MzU6MDcifQ.qmcmMPmxFfURIMXiZYpZlQQfxi-rrGLuNNt28L3dG80", a, algorithms=['HS256'])
-print(w)
-
+# w= jwt.decode("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjA5MzcyMTE2NjgzIiwiZGF0ZSI6IjIwMjMtMDgtMDkgMTE6MzU6MDcifQ.qmcmMPmxFfURIMXiZYpZlQQfxi-rrGLuNNt28L3dG80", a, algorithms=['HS256'])
+# print(w)
+#
 
 
 
@@ -32,3 +32,7 @@ print(w)
 #
 # # Printing the Hash
 # print(hashed.hexdigest())
+
+a = "2023-08-09 19:23:16"
+time = datetime.datetime.now()
+print((time - datetime.datetime.strptime(a , "%Y-%m-%d %H:%M:%S")).seconds)

@@ -1,5 +1,5 @@
 import datetime
-from typing import Optional , List
+from typing import Optional, List
 from bson import ObjectId
 import strawberry
 
@@ -12,9 +12,10 @@ class Register:
     username: Optional[str]
 
 
-
 @strawberry.type
 class User:
+    id: Optional[str]
+    username: Optional[str]
     name: Optional[str]
     family: Optional[str]
     money: Optional[int]
@@ -32,7 +33,16 @@ class Login:
     username: str
     password: str
 
+
 @strawberry.type
 class Error:
     error_code: Optional[int]
     message_code: Optional[str]
+
+
+@strawberry.type
+class SMS:
+    type: Optional[str]
+    message: Optional[str]
+
+
